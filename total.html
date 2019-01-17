@@ -1,0 +1,247 @@
+    <html>
+      <head>
+        <meta charset="UTF-8">
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="googleSheets.js"></script>
+        <link rel="stylesheet" type="text/css" href="st.css" />
+      </head>
+
+      <body>
+        <h1>Album</h1>
+
+        <input id="mybtn1" type="button" value="沖縄">
+        <input id="mybtn2" type="button" value="静岡">
+        <input id="mybtn3" type="button" value="高知">
+        <input id="mybtn4" type="button" value="鹿児島">
+        <input id="mybtn5" type="button" value="広場">
+        <input id="mybtn6" type="button" value="塔">
+        <input id="mybtn7" type="button" value="サグラダファミリア">
+        <input id="mybtn8" type="button" value="花の小道"><div id="mybtn"></div>
+
+        <script>
+        /* global $ loadSheets */
+        $(function(){
+            "use strict";
+            // unsupported.
+            if (!'SpeechSynthesisUtterance' in window) {
+            alert('Speech synthesis(音声合成) APIには未対応です.');
+            return;
+        }
+
+        // 発話機能をインスタンス化
+        var msg = new SpeechSynthesisUtterance();
+
+        $('#mybtn1').on('click',function() {
+          // 発話実行
+          msg.volume = 1.0; // 音量 min 0 ~ max 1
+          msg.rate = 1.0; // 速度 min 0 ~ max 10
+          msg.pitch = 1.2; // 音程 min 0 ~ max 2
+
+          msg.text = $('#mybtn1').val(); // 話す中身
+          msg.lang = 'ja-JP'; // en-US or ja-JP
+
+          speechSynthesis.speak(msg);
+
+          // 終了時の処理
+          msg.onend = function (event) {
+            console.log('喋った時間：' + event.elapsedTime + 's');
+          }
+        });
+
+        $('#mybtn2').on('click',function() {
+          // 発話実行
+          msg.volume = 1.0; // 音量 min 0 ~ max 1
+          msg.rate = 1.0; // 速度 min 0 ~ max 10
+          msg.pitch = 1.2; // 音程 min 0 ~ max 2
+
+          msg.text = $('#mybtn2').val(); // 話す中身
+          msg.lang = 'ja-JP'; // en-US or ja-JP
+
+          speechSynthesis.speak(msg);
+
+          // 終了時の処理
+          msg.onend = function (event) {
+            console.log('喋った時間：' + event.elapsedTime + 's');
+          }
+        });
+
+        $('#mybtn3').on('click',function() {
+          // 発話実行
+          msg.volume = 1.0; // 音量 min 0 ~ max 1
+          msg.rate = 1.0; // 速度 min 0 ~ max 10
+          msg.pitch = 1.2; // 音程 min 0 ~ max 2
+
+          msg.text = $('#mybtn3').val(); // 話す中身
+          msg.lang = 'ja-JP'; // en-US or ja-JP
+
+          speechSynthesis.speak(msg);
+
+          // 終了時の処理
+          msg.onend = function (event) {
+            console.log('喋った時間：' + event.elapsedTime + 's');
+          }
+        });
+
+        $('#mybtn4').on('click',function() {
+          // 発話実行
+          msg.volume = 1.0; // 音量 min 0 ~ max 1
+          msg.rate = 1.0; // 速度 min 0 ~ max 10
+          msg.pitch = 1.2; // 音程 min 0 ~ max 2
+
+          msg.text = $('#mybtn4').val(); // 話す中身
+          msg.lang = 'ja-JP'; // en-US or ja-JP
+
+          speechSynthesis.speak(msg);
+
+          // 終了時の処理
+          msg.onend = function (event) {
+            console.log('喋った時間：' + event.elapsedTime + 's');
+          }
+        });
+
+        $('#mybtn5').on('click',function() {
+          // 発話実行
+          msg.volume = 1.0; // 音量 min 0 ~ max 1
+          msg.rate = 1.0; // 速度 min 0 ~ max 10
+          msg.pitch = 1.2; // 音程 min 0 ~ max 2
+
+          msg.text = $('#mybtn5').val(); // 話す中身
+          msg.lang = 'ja-JP'; // en-US or ja-JP
+
+          speechSynthesis.speak(msg);
+
+          // 終了時の処理
+          msg.onend = function (event) {
+            console.log('喋った時間：' + event.elapsedTime + 's');
+          }
+        });
+
+        $('#mybtn6').on('click',function() {
+          // 発話実行
+          msg.volume = 1.0; // 音量 min 0 ~ max 1
+          msg.rate = 1.0; // 速度 min 0 ~ max 10
+          msg.pitch = 1.2; // 音程 min 0 ~ max 2
+
+          msg.text = $('#mybtn6').val(); // 話す中身
+          msg.lang = 'ja-JP'; // en-US or ja-JP
+
+          speechSynthesis.speak(msg);
+
+          // 終了時の処理
+          msg.onend = function (event) {
+            console.log('喋った時間：' + event.elapsedTime + 's');
+          }
+        });
+
+        $('#mybtn7').on('click',function() {
+          // 発話実行
+          msg.volume = 1.0; // 音量 min 0 ~ max 1
+          msg.rate = 1.0; // 速度 min 0 ~ max 10
+          msg.pitch = 1.2; // 音程 min 0 ~ max 2
+
+          msg.text = $('#mybtn7').val(); // 話す中身
+          msg.lang = 'ja-JP'; // en-US or ja-JP
+
+          speechSynthesis.speak(msg);
+
+          // 終了時の処理
+          msg.onend = function (event) {
+            console.log('喋った時間：' + event.elapsedTime + 's');
+          }
+        });
+
+        $('#mybtn8').on('click',function() {
+          // 発話実行
+          msg.volume = 1.0; // 音量 min 0 ~ max 1
+          msg.rate = 1.0; // 速度 min 0 ~ max 10
+          msg.pitch = 1.2; // 音程 min 0 ~ max 2
+
+          msg.text = $('#mybtn8').val(); // 話す中身
+          msg.lang = 'ja-JP'; // en-US or ja-JP
+
+          speechSynthesis.speak(msg);
+
+          // 終了時の処理
+          msg.onend = function (event) {
+            console.log('喋った時間：' + event.elapsedTime + 's');
+          }
+        });
+
+            $("#mybtn1").on("click",showdata1);
+            $("#mybtn2").on("click",showdata2);
+            $("#mybtn3").on("click",showdata3);
+            $("#mybtn4").on("click",showdata4);
+            $("#mybtn5").on("click",showdata5);
+            $("#mybtn6").on("click",showdata6);
+            $("#mybtn7").on("click",showdata7);
+            $("#mybtn8").on("click",showdata8);
+
+
+          async function showdata1 () {
+            let data = await loadSheets('s1316136!B11:D20');
+            $("#mybtn1").append(data.values[0][2]);  //文字
+            $("#mybtn1").append("<img width='300px' height='300px' src='"+data.values[0][1]+"'/>");  //img
+          }
+
+
+          async function showdata2 () {
+            let data = await loadSheets('s1316136!B11:D20');
+            $("#mybtn2").append(data.values[1][2]);  //文字
+            $("#mybtn2").append("<img width='300px' height='300px' src='"+data.values[1][1]+"'/>");  //img
+          }
+
+
+          async function showdata3 () {
+            let data = await loadSheets('s1316136!B11:D20');
+            $("#mybtn3").append(data.values[2][2]);  //文字
+            $("#mybtn3").append("<img width='300px' height='300px' src='"+data.values[2][1]+"'/>");  //img
+          }
+
+
+          async function showdata4 () {
+            let data = await loadSheets('s1316136!B11:D20');
+            $("#mybtn4").append(data.values[3][2]);  //文字
+            $("#mybtn4").append("<img width='300px' height='300px' src='"+data.values[3][1]+"'/>");  //img
+          }
+
+          $("#mybtn5").on("click",showdata5);
+
+          async function showdata5 () {
+            let data = await loadSheets('s1316136!B11:D20');
+            $("#mybtn5").append(data.values[4][2]);  //文字
+            $("#mybtn5").append("<img width='300px' height='300px' src='"+data.values[4][1]+"'/>");  //img
+          }
+
+
+
+          async function showdata6 () {
+            let data = await loadSheets('s1316136!B11:D20');
+            $("#mybtn6").append(data.values[5][2]);  //文字
+            $("#mybtn6").append("<img width='300px' height='300px' src='"+data.values[5][1]+"'/>");  //img
+          }
+
+
+
+          async function showdata7 () {
+            let data = await loadSheets('s1316136!B11:D20');
+            $("#mybtn7").append(data.values[6][2]);  //文字
+            $("#mybtn7").append("<img width='300px' height='300px' src='"+data.values[6][1]+"'/>");  //img
+          }
+
+
+
+          async function showdata8 () {
+            let data = await loadSheets('s1316136!B11:D20');
+            $("#mybtn8").append(data.values[7][2]);  //文字
+            $("#mybtn8").append("<img width='300px' height='300px' src='"+data.values[7][1]+"'/>");  //img
+          }
+        });
+
+
+        </script>
+        <script async defer src="https://apis.google.com/js/api.js"
+          onload="this.onload=function(){};handleClientLoad()"
+          onreadystatechange="if (this.readyState === 'complete') this.onload()">
+        </script>
+      </body>
+    </html>

@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+
+body{
+    margin: auto;
+    padding: 2%;
+    font-size: 25pt;
+    font-family: helvetica,arial;
+    color: white;
+    background-color: #d2d9ff
+    line-height: 1.5;
+    background-image: url(img/CorkBoard.jpg)
+    /*background-color: #AAFFFF;*/
+}
+
+main{
+
+    width: 600px;
+    height: 600px;
+    background-color: rgba(255,255,255,0.5);
+	margin: auto;
+    padding: 2%;
+}
+
+h1{
+    padding: 2%;
+    border-left: #fff solid 5px;
+}
+
+h1{
+    padding: 1%;
+}
+
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    background: #87befd;
+    font-size: 18pt;
+    margin-right:10px;
+    color: #FFF;
+    width: 120px;
+    height: 120px;
+    line-height: 120px;
+    border-radius: 50%;
+    text-align: center;
+    vertical-align: middle;
+    overflow: hidden;
+    box-shadow: 0px 0px 0px 5px #87befd;
+    border: dashed 1px #FFF;
+    transition: .4s;
+}
+
+.btn:hover{
+    background: #668ad8;
+     box-shadow: 0px 0px 0px 5px #668ad8;
+}
+/*
+.fadein {
+  opacity : 0;
+  transform: translateY(20px);
+  transition: all 1s;
+}
+*/
